@@ -1,0 +1,10 @@
+favorite_places=['paris','londres','guadeloupe','papeete','hawai','zanzibar']
+print(f"Liste d'origine : {favorite_places}")
+print(f"liste classée : {sorted(favorite_places)}")
+print(f"Liste d'origine : {favorite_places}")
+print(f"Liste d'origine inversée : {sorted(favorite_places, reverse=True)}")
+print(f"Liste d'origine inversée à nouveau : {sorted(favorite_places)}")
+favorite_places.sort()
+print(f"Liste classée : {favorite_places}")
+favorite_places.sort(reverse=True)
+print(f"Liste classée inversée : {favorite_places}")
