@@ -16,20 +16,10 @@ class Car:
         print(f"Cette voiture a {self.odometer_reading} kms au compteur.")
 
     def update_odometer(self, mileage):
-        if mileage>=self.odometer_reading:
+        if mileage >= self.odometer_reading:
             self.odometer_reading = mileage
         else:
             print("Vous ne pouvez pas enlever des kilomètres")
 
     def increment_odometer(self, miles):
-        self.odometer_reading+=miles
-
-
-my_new_car = Car('audi', 'a4', 2024)
-print(my_new_car.get_descriptive_name())
-
-my_new_car.update_odometer(234)
-my_new_car.read_odometer()
-
-my_new_car.increment_odometer(200)
-my_new_car.read_odometer()
+        self.odometer_reading += miles

@@ -1,10 +1,37 @@
-import car
+class Car:
+    """Une tentative simple pour représenter une voiture"""
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        """Renvoie une description formatée"""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+    def read_odometer(self):
+        print(f"Cette voiture a {self.odometer_reading} kms au compteur.")
+
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("Vous ne pouvez pas enlever des kilomètres")
+
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+    def fill_gas_tank(self):
+        print("Le réservoir est plein")
 
 
 class Battery:
     """Une tentative simple pour modéliser une batterie pour une voiture électrique"""
 
-    def __init__(self, battery_size=65):
+    def __init__(self, battery_size=45):
         """Initialise les attributs de la batterie"""
         self.battery_size = battery_size
 
@@ -21,8 +48,12 @@ class Battery:
             range = "unknown"
         print(f"Cette voiture peut parcourir {range} kms avec une charge pleine.")
 
+    def upgrade_battery(self):
+        if self.battery_size != 65:
+            self.battery_size = 65
 
-class ElectricCar(car.Car):
+
+class ElectricCar(Car):
     """Utilise la classe Car mais avec des spécifications électriques"""
 
     def __init__(self, make, model, year):
@@ -38,4 +69,7 @@ class ElectricCar(car.Car):
 my_leaf = ElectricCar('nissan', 'leaf', 2024)
 print(my_leaf.get_descriptive_name())
 my_leaf.battery.describe_battery()
+my_leaf.battery.get_range()
+
+my_leaf.battery.upgrade_battery()
 my_leaf.battery.get_range()
