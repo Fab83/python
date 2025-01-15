@@ -1,0 +1,8 @@
+Avec Python on peut faire du calcul
+Avec Python on peut aussi manipuler du texte
+Avec Python on peut aussi manipuler des fichier
+Avec Python on peut faire du développement Wev
+Avec Python on peut créer des programmes en ligne de commande
+Avec Python on peut créer ses propres jeux
+Avec Python on peut créer des logiciels complets en interface graphique
+Avec Python on peut tout faire
